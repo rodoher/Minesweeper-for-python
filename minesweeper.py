@@ -21,11 +21,11 @@ class Minesweeper:
         self.pressed = []
 
     def start_game(self):
-        options = ["a", "b", "i", "o"]
+        options = ["a", "b", "i", "p"]
         lev = None
         while lev not in options:
             lev = simpledialog.askstring("New Game", "Level: (b=beginner, i=intermediate, a=advanced, "
-                                                     "o=personalize) ").lower()
+                                                     "p=personalize) ").lower()
         self.level = lev
         match self.level:
             case "b":
@@ -40,7 +40,7 @@ class Minesweeper:
                 self.rows = 20
                 self.columns = 30
                 self.bombs = 100
-            case "o":
+            case "p":
                 self.rows = simpledialog.askinteger("New Game", "Number of rows: ")
                 if self.rows is None:
                     check_play = messagebox.askyesno("Warning", "You have to introduce this information. "
