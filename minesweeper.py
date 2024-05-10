@@ -115,7 +115,7 @@ class Minesweeper:
             nums = []
             for i in relevant_locations:
                 if 0 <= i < self.total_squares:
-                    # c es el valor donde hemos pinchado, i es el lugar que puede ser relevante
+                    # c is the clicked box, i are all the surrounding places
                     a = True
                     if c % self.columns == 0:
                         if i % self.columns == self.columns-1:
